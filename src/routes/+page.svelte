@@ -18,9 +18,9 @@
 	When my search is less than
 	<input type="number" bind:value={turn} />
 	characters long, use
-	<select name="short" bind:value={left}>
-		{#each providers as p}
-			<option value={p.id}>{p.name}</option>
+	<select bind:value={left}>
+		{#each Object.entries(providers) as [id, p]}
+			<option value={id}>{p.name}</option>
 		{/each}
 	</select>
 	to search.
@@ -30,9 +30,9 @@
 	Otherwise, if the input is longer than
 	<input type="number" bind:value={turn} />
 	characters, use
-	<select name="short" bind:value={right}>
-		{#each providers as p}
-			<option value={p.id}>{p.name}</option>
+	<select bind:value={right}>
+		{#each Object.entries(providers) as [id, p]}
+			<option value={id}>{p.name}</option>
 		{/each}
 	</select>
 	instead.

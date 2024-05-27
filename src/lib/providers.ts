@@ -38,6 +38,10 @@ export const providers: Providers = {
     chatgpt: {
         name: "ChatGPT",
         url: "https://chatgpt.com/?q="
+    },
+    blank: {
+        name: "about:blank (for testing)",
+        url: "about:blank/"
     }
 };
 
